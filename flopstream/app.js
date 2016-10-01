@@ -21,8 +21,6 @@ var config = require('./config');
 // Load in Routes
 // TODO: Make this a dynamic loading system that simply scans the directory
 var routes = require('./routes/index');
-var docs = require('./routes/docs');
-var apiV1 = require('./routes/api/v1');
 
 // Instantiate the application
 var app = express();
@@ -55,8 +53,6 @@ populateDB();
 // Actually use the loaded routes
 // TODO: make this automatic instead of being manually entered
 app.use('/', routes);
-app.use('/docs', docs);
-app.use('/api/v1', apiV1);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
