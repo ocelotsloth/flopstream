@@ -1,0 +1,24 @@
+//-/////////////////////////////////////////////////////////////////////////////
+//-                  Mason SRCT: Schedules Global Head File
+//- - This contains the global header for the entire site.
+//- - Take care to remember that these resources load on all pages, so look into
+//-   other options before using this.
+//-/////////////////////////////////////////////////////////////////////////////
+
+head
+  // Metadata
+  meta(charset='UTF-8')
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  // Scripts
+  script(src="/javascripts/jquery-2.2.4.min.js")
+  script(src='/javascripts/bootstrap.js')
+  script(src="/javascripts/fontawesome.js")
+  link(href='/stylesheets/main.css', rel='stylesheet')
+
+  // Datatables
+  link(rel="stylesheet" type="text/css" href="/stylesheets/datatables.min.css")
+  script(type="text/javascript" src="/javascripts/datatables.min.js")
+
+  // Favicon
+  link(rel='shortcut icon', href='/favicon.ico?', type='image/x-icon')
