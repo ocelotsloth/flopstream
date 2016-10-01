@@ -1,6 +1,35 @@
-//-/////////////////////////////////////////////////////////////////////////////
-//-                     Mason SRCT: Schedules Main Page
-//- - This page is the main application page.
-//- - Extends the layout.pug file
-//-/////////////////////////////////////////////////////////////////////////////
 extends layout
+
+block content
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-md-12">
+          <h1><strong>
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-music fa-stack-1x fa-inverse"></i>
+            </span>
+            <i class="fa">flopstream</i>
+          </strong></h1>
+        </div>
+      </div>
+    </div>
+    div.col-md-8
+        h3 Step 1: Upload your MIDI File.
+        legend
+        <button class="btn btn-default" type="submit">Upload MIDI</button>
+    div.col-md-8
+        br
+        h3 Step 2: Wait a bit while your request is processed.
+        legend
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+            </div>
+        </div>
+        p waiting...
+        br
+    div.col-md-8
+        h3 Step 3: Get a link to the upload!
+        legend
+        <button type="button" class="btn btn-success">Click Here!</button>
