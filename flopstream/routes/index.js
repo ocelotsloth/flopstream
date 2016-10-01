@@ -24,7 +24,7 @@ router.post('/upload', function(req, res) {
     }
 
     sampleFile = req.files.sampleFile;
-    sampleFile.mv('/home/bruno207/Desktop/blah.pdf', function(err) {
+    sampleFile.mv(config.saveLocation, function(err) {
         if (err) {
             res.status(500).send(err);
         }

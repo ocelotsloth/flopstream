@@ -9,6 +9,6 @@ var config = {}
 // Application Name
 config.siteName = "S";
 // Application Description (subtitle)
-config.siteDescription = "A."
-
+config.siteDescription = "A.";
+config.saveLocation = "/path/to/save/location/temp.midi";
 module.exports = config;
