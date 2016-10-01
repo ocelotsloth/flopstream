@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-//              Mason SRCT: Schedules Application Main File
+//              Mason SRCT: FlopServe Application Main File
 // - This is the main file for the schedules app, which loads in all of the
 //   configuration and routing files. Essentially, any other file eventually
 //   leads here.
@@ -12,8 +12,6 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var mongooseRedisCache = require("mongoose-redis-cache");
 
 // Load site wide configurations
 var config = require('./config');
@@ -40,15 +38,6 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Connect to mongo
-mongoose.connect(config.mongoDBURL);
-// Setup the mongo redis caching for performance
-mongooseRedisCache(mongoose);
-
-// Populate initial data
-var populateDB = require('./setup/populateDB');
-populateDB();
 
 // Actually use the loaded routes
 // TODO: make this automatic instead of being manually entered
