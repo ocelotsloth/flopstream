@@ -18,10 +18,9 @@ block content
         h3 Step 1: Upload your MIDI File.
         legend
         <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data">
-            <input type="file" name="sampleFile" />
-            <input type='submit' value='Upload!' />
+            <label class="btn btn-default btn-file">Browse<input type="file" style="display: none;"></label>
+            <label class="btn btn-default btn-file">Upload MIDI File!<input type="submit" style="display: none;"></label>
         </form>
-        <button class="btn btn-default" type="submit">Upload MIDI</button>
     div.col-md-8
         br
         h3 Step 2: Wait a bit while your request is processed.
