@@ -12,6 +12,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fileUpload = require('express-fileupload');
 
 // Load site wide configurations
 var config = require('./config');
@@ -38,6 +39,7 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(fileUpload());
 
 // Actually use the loaded routes
 // TODO: make this automatic instead of being manually entered
