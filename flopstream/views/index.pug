@@ -18,10 +18,10 @@ block content
         h3 Step 1: Upload your MIDI File.
         legend
         form(ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data")
-            label.btn.btn-default.btn-file Browse
-                input(type="file" style="display: none;")
-            <br></br>
-            | File:
+            <label class="btn btn-primary" for="sampleFile">
+                <input id="sampleFile" name="sampleFile" type="file" style="display:none;" onchange="$('#upload-file-info').html($(this).val());"> Browse for MIDI file.
+            </label>
+            <span class='label label-info' id="upload-file-info" style="background-color: lightseagreen;"></span>
             <br></br>
             label.btn.btn-default.btn-file Upload MIDI File!
                 input(type="submit" style="display: none;")
