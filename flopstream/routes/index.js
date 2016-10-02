@@ -19,17 +19,20 @@ router.post('/upload', function(req, res) {
     var sampleFile;
 
     if (!req.files) {
-        res.send('No files were uploaded.');
+        res.redirect('/404');
         return;
     }
 
     sampleFile = req.files.sampleFile;
     sampleFile.mv(config.saveLocation, function(err) {
         if (err) {
-            res.status(500).send(err);
+            res.redirect('/500');
         }
         else {
-            res.send('File uploaded!');
+            config.onePage.stepOne = false;
+            config.onePage.stepTwo = true;
+            res.redirect('/');
+            return;
         }
     });
 });
