@@ -6,6 +6,12 @@ config.onePage = {
     'stepThree': false
 }
 
+config.url = "";
+
+config.setURL = function(inputURL) {
+    config.url = inputURL;
+}
+
 config.saveLocation = "/path/to/file/location";
 
 module.exports = config;

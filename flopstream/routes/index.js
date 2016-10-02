@@ -68,7 +68,7 @@ var startPlay = function() {
     exec("screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill");
     console.log('killed');
 
-    URLALLCAPSJUSTFORDHAYNES = exec("youtube-upload --title='test' output.ogg").stdout
+    config.setURL(exec("youtube-upload --title='test' output.ogg").stdout);
 }
 
 router.post('/upload', function(req, res) {
