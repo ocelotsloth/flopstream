@@ -9,6 +9,7 @@ var router = express.Router();
 var robot = require('robotjs');
 require('shelljs/global');
 
+var URLALLCAPSJUSTFORDHANES = {};
 // Load site wide configurations
 var config = require('../config');
 
@@ -61,13 +62,13 @@ var startPlay = function() {
     console.log(robot.getPixelColor(446,297));
 
     while(robot.getPixelColor(446,297) == "eeeeee") {
-    exec("sleep .5");
-}
+        exec("sleep .1");
+    }
 
-exec("screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill");
-console.log('killed');
-    // }
+    exec("screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill");
+    console.log('killed');
 
+    URLALLCAPSJUSTFORDHAYNES = exec("youtube-upload --title='test' output.ogg").stdout
 }
 
 router.post('/upload', function(req, res) {
