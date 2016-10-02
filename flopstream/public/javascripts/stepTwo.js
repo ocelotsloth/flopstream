@@ -23,6 +23,7 @@ setTimeout(function() {
               setTimeout(function() {
                   $progress.css('display', 'none');
                   $alert.css('display', 'block');
+                  $('#upload2').css('display', 'block');
               }, 1000);
             }, 500); // WAIT 5 milliseconds
         }, 2000); // WAIT 2 seconds

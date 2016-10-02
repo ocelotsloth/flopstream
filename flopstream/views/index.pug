@@ -37,6 +37,9 @@ block content
                 div(class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:0%")
             div(class="alert alert-success" style="display: none;" role="alert") Loading completed!
             br
+            form(ref='uploadForm2' id='uploadForm2' action='/upload2' method='post' encType="multipart/form-data")
+                label.btn.btn-default(style="display: none;")#upload2 Get your Link!
+                    input(type="submit" style="display: none;")
             script(src="/javascripts/stepTwo.js")
 
     if config.onePage.stepThree
@@ -44,4 +47,4 @@ block content
         div.col-md-8
             h3 Step 3: Get a link to the upload!
             legend
-            button(type="button" class="btn btn-success") Click Here!
+            <input type="text" class="form-control" placeholder="Text input">

@@ -31,10 +31,21 @@ router.post('/upload', function(req, res) {
         else {
             config.onePage.stepOne = false;
             config.onePage.stepTwo = true;
+            config.onePage.stepThree = false;
+
             res.redirect('/');
             return;
         }
     });
 });
+
+router.post('/upload2', function(req, res) {
+    config.onePage.stepOne = false;
+    config.onePage.stepTwo = false;
+    config.onePage.stepThree = true;
+
+    res.redirect('/');
+    return;
+})
 
 module.exports = router;
