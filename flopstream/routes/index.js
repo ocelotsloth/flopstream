@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 })
 
 var startPlay = function() {
-    t.setMouseDelay(30);
+    robot.setMouseDelay(30);
 
     //Move to Load Sequence Button
     robot.moveMouse(450,185);
